@@ -1,0 +1,53 @@
+{%extends 'forms_layout.html'%}
+{%block form%}
+<div class="bg-img">
+    <div class="content" style="width:800px;">
+       <header>Add a new Case</header>
+       <form action="/AddingCaseInDb" method="POST">
+          <div class="field">
+             <span class="fas fa-gavel"></span>
+             <input type="text"  name="cnr" required placeholder="Enter Case Number eg:XXXXX/123/2023" >
+          </div>
+          <div class="field space">
+             <span class="fa fa-user"></span>
+             <input type="text" name="petitioner" required placeholder="Enter Petitioner Name">
+          </div>
+          <div class="field space">
+            <span class="fas fa-gavel"></span>
+            <input type="text" name="petitioner(A)" required placeholder="Enter Petitioner's Advocate Name">
+         </div>
+         <div class="field space">
+            <span class="fa fa-user"></span>
+            <input type="text" name="Respondent" required placeholder="Enter Respondent Name">
+         </div>
+         <div class="field space">
+            <span class="fas fa-gavel"></span>
+            <input type="text" name="Respondent(A)" required placeholder="Enter Respondent's Advocate Name">
+         </div>
+         <div class="field space">
+            <span class="fas fa-calendar"></span>
+            <input placeholder="Filed On" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" name="filed on" />      
+         </div>
+         <div class="field space">
+            <span class="fas fa-users"></span>
+            <input type="text" name="disposed by"  placeholder="Disposed By">
+         </div>
+         <div class="field space">
+            <span class="fas fa-gavel"></span>
+            <input type="text" name="Bench name" required placeholder="Bench Name">
+         </div>
+         <div class="field space">
+            <span class="fas fa-calendar"></span>
+            <input placeholder="Disposed On" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" name="disposed on" />      
+         </div>
+         <div class="field space">
+            <span class="fas fa-gavel"></span>
+            <input type="text" name="Status" required placeholder="Status of the case">
+         </div><br>
+          <div class="field">
+             <input type="submit" value="Add Case">
+          </div>
+       </form>
+    </div>
+ </div>
+{%endblock%}

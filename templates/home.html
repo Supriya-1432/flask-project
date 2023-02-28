@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{% block content%}
+<div  style="padding-top:10%;padding-bottom:13%;padding-left:42%;padding-right:42%;">
+<img src="static/images/image-1.png" alt="">
+<br><br>
+<form class="d-flex" style="width: 340px;" action='/searchcase' method="POST">
+    <input class="form-control me-2" type="search" name="cnr1" placeholder="Search By Case Number" required style="width:600px;">
+    <button class="btn btn-primary" type="submit">Search</button>
+</form>
+</div>
+{%endblock%}

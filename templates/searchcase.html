@@ -1,0 +1,57 @@
+{%extends 'layout.html'%}
+{%block content%}
+{%if i=="No such case registered"%}
+    <center><h3 class="my-5">No such case registered</h3></center>
+    {%else%}
+    <h1 class="text-md-center text-lg-center text-dark fw-bold text-sm-start shadow m-3">Case Information</h1>
+    <div class="container m-5">
+    <table class="table table-striped table-hover center" style="text-align: center;">
+          <tr>
+            <th scope="col">CNR</th>
+            <td>{{i[0]}}</td>
+          </tr>
+          <tr>
+            <th scope="col">Petitioner</th>
+            <td>{{i[1]}}</td>
+          </tr>
+          <tr>
+            <th scope="col">Advocate(P)</th>
+            <td>{{i[2]}}</td>
+          </tr>
+          <tr>
+            <th scope="col">Respondent</th>
+            <td>{{i[3]}}</td>
+          </tr>
+          <tr>
+            <th scope="col">Advocate(R)</th>
+            <td>{{i[4]}}</td>
+          </tr>
+          <tr>
+            <th scope="col">Filed on</th>
+            <td>{{i[5]}}</td>
+          </tr>
+          <tr>
+            <th scope="col">Disposed by</th>
+            <td>{{i[6]}}</td>
+          </tr>
+          <tr>
+            <th scope="col">Bench name</th>
+            <td>{{i[7]}}</td>
+          </tr>
+          <tr>
+            <th scope="col">Disposed on</th>
+            <td>{{i[8]}}</td>
+          </tr>
+          <tr>
+            <th scope="col">Status</th>
+            <td>{{i[9]}}</td>
+          </tr>
+        <tbody>
+    </table>
+    </div>
+    {%endif%}
+
+    <center>
+      <a class="btn btn-primary my-3" href="/savecase">Save case</a>
+    </center>
+{%endblock%}
